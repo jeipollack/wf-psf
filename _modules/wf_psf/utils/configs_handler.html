@@ -18,7 +18,7 @@
         <script src="../../../_static/documentation_options.js?v=af2ce170"></script>
         <script src="../../../_static/doctools.js?v=888ff710"></script>
         <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
-        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
+        <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
         <script src="../../../_static/twemoji.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="author" title="About these documents" href="../../../about.html" />
@@ -102,6 +102,7 @@
 <span class="sd">:Authors: Jennifer Pollack &lt;jennifer.pollack@cea.fr&gt;</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
+
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">wf_psf.utils.read_config</span> <span class="kn">import</span> <span class="n">read_conf</span>
 <span class="kn">from</span> <span class="nn">wf_psf.data.training_preprocessing</span> <span class="kn">import</span> <span class="n">TrainingDataHandler</span><span class="p">,</span> <span class="n">TestDataHandler</span>
@@ -533,9 +534,9 @@
         <span class="p">)</span>
 
         <span class="c1"># Update metrics_confs dict with latest result</span>
-        <span class="n">plots_config_handler</span><span class="o">.</span><span class="n">metrics_confs</span><span class="p">[</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_file_handler</span><span class="o">.</span><span class="n">workdir</span>
-        <span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">metrics_conf</span>
+        <span class="n">plots_config_handler</span><span class="o">.</span><span class="n">metrics_confs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_file_handler</span><span class="o">.</span><span class="n">workdir</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">metrics_conf</span>
+        <span class="p">)</span>
 
         <span class="c1"># Update metric results dict with latest result</span>
         <span class="n">plots_config_handler</span><span class="o">.</span><span class="n">list_of_metrics_dict</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_file_handler</span><span class="o">.</span><span class="n">workdir</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
