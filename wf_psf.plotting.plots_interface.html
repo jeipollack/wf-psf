@@ -123,7 +123,7 @@ plot configurations.</p>
 </dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="wf_psf.plotting.plots_interface.MetricsPlotHandler">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wf_psf.plotting.plots_interface.</span></span><span class="sig-name descname"><span class="pre">MetricsPlotHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotting_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_of_stars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_rmse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plots_dir</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/wf_psf/plotting/plots_interface.html#MetricsPlotHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wf_psf.plotting.plots_interface.MetricsPlotHandler" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wf_psf.plotting.plots_interface.</span></span><span class="sig-name descname"><span class="pre">MetricsPlotHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotting_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_of_stars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_rmse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rel_rmse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plots_dir</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/wf_psf/plotting/plots_interface.html#MetricsPlotHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wf_psf.plotting.plots_interface.MetricsPlotHandler" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>MetricsPlotHandler class.</p>
 <p>A class to handle plot parameters for various
@@ -233,25 +233,30 @@ metrics.</p>
 <dt class="sig sig-object py" id="wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wf_psf.plotting.plots_interface.</span></span><span class="sig-name descname"><span class="pre">ShapeMetricsPlotHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotting_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_of_stars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plots_dir</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/wf_psf/plotting/plots_interface.html#ShapeMetricsPlotHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>ShapeMetricsPlotHandler class.</p>
-<p>A class to handle plot parameters shape
-metrics results.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Class ID name</p></li>
-<li><p><strong>plotting_params</strong> (<em>Recursive Namespace object</em>) – Recursive Namespace Object containing plotting parameters</p></li>
-<li><p><strong>metrics</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – Dictionary containing list of metrics</p></li>
-<li><p><strong>list_of_stars</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – List containing the number of stars used for each training data set</p></li>
-<li><p><strong>plots_dir</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Output directory for metrics plots</p></li>
-</ul>
-</dd>
-</dl>
+<p>ShapeMetricsPlotHandler class.
+A class to handle plot parameters shape
+metrics results.
+:param id: Class ID name
+:type id: str
+:param plotting_params: Recursive Namespace Object containing plotting parameters
+:type plotting_params: Recursive Namespace object
+:param metrics: Dictionary containing list of metrics
+:type metrics: list
+:param list_of_stars: List containing the number of stars used for each training data set
+:type list_of_stars: list
+:param plots_dir: Output directory for metrics plots
+:type plots_dir: str</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler.plot" title="wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler.make_shape_metrics_plot" title="wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler.make_shape_metrics_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_shape_metrics_plot</span></code></a>(rmse_data, ...)</p></td>
+<td><p>Make Shape Metrics Plot.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler.plot" title="wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>()</p></td>
 <td><p>Plot.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler.prepare_metrics_data" title="wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler.prepare_metrics_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prepare_metrics_data</span></code></a>(plot_dataset, ...)</p></td>
+<td><p>Prepare Metrics Data.</p></td>
 </tr>
 </tbody>
 </table>
@@ -261,11 +266,52 @@ metrics results.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler.make_shape_metrics_plot">
+<span class="sig-name descname"><span class="pre">make_shape_metrics_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rmse_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_rmse_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rel_rmse_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/wf_psf/plotting/plots_interface.html#ShapeMetricsPlotHandler.make_shape_metrics_plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler.make_shape_metrics_plot" title="Link to this definition"></a></dt>
+<dd><p>Make Shape Metrics Plot.</p>
+<p>A function to produce plots for the shape metrics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rmse_data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – A list of dictionaries where each dictionary stores run as the key and the Root Mean Square Error (rmse).</p></li>
+<li><p><strong>std_rmse_data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – A list of dictionaries where each dictionary stores run as the key and the Standard Deviation of the Root Mean Square Error (rmse) as the value.</p></li>
+<li><p><strong>rel_rmse_data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – A list of dictionaries where each dictionary stores run as the key and the Root Mean Square Error (rmse) relative to the Euclid requirements as the value.</p></li>
+<li><p><strong>plot_dataset</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – A string denoting whether metrics are for the train or test datasets.</p></li>
+<li><p><strong>metric</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – A string representing the type of shape metric, i.e., e1, e2, or R2.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler.plot">
 <span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/wf_psf/plotting/plots_interface.html#ShapeMetricsPlotHandler.plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler.plot" title="Link to this definition"></a></dt>
 <dd><p>Plot.</p>
-<p>A function to generate plots for the train and test
+<p>A generic function to generate plots for the train and test
 metrics.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler.prepare_metrics_data">
+<span class="sig-name descname"><span class="pre">prepare_metrics_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plot_dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e1_req_euclid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e2_req_euclid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R2_req_euclid</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/wf_psf/plotting/plots_interface.html#ShapeMetricsPlotHandler.prepare_metrics_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wf_psf.plotting.plots_interface.ShapeMetricsPlotHandler.prepare_metrics_data" title="Link to this definition"></a></dt>
+<dd><p>Prepare Metrics Data.</p>
+<p>A function to prepare the metrics data for plotting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>plot_dataset</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – A string representing the dataset, i.e. training or test metrics.</p></li>
+<li><p><strong>e1_req_euclid</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) – A float denoting the Euclid requirement for the <cite>e1</cite> shape metric.</p></li>
+<li><p><strong>e2_req_euclid</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) – A float denoting the Euclid requirement for the <cite>e2</cite> shape metric.</p></li>
+<li><p><strong>R2_req_euclid</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) – A float denoting the Euclid requirement for the <cite>R2</cite> shape metric.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>shape_metrics_data</strong> – A dictionary containing the shape metrics data from a set of runs.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)">dict</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -299,7 +345,7 @@ in training the model.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="wf_psf.plotting.plots_interface.make_plot">
-<span class="sig-prename descclassname"><span class="pre">wf_psf.plotting.plots_interface.</span></span><span class="sig-name descname"><span class="pre">make_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_axis_err</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_axis_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_right_axis_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_left_axis_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/wf_psf/plotting/plots_interface.html#make_plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wf_psf.plotting.plots_interface.make_plot" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">wf_psf.plotting.plots_interface.</span></span><span class="sig-name descname"><span class="pre">make_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_axis_err</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y2_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_axis_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_right_axis_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_left_axis_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/wf_psf/plotting/plots_interface.html#make_plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wf_psf.plotting.plots_interface.make_plot" title="Link to this definition"></a></dt>
 <dd><p>Make Plot.</p>
 <p>A function to generate metrics plots.</p>
 <dl class="field-list simple">
@@ -308,6 +354,7 @@ in training the model.</p>
 <li><p><strong>x_axis</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – x-axis values</p></li>
 <li><p><strong>y_axis</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – y-axis values</p></li>
 <li><p><strong>y_axis_err</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – Error values for y-axis points</p></li>
+<li><p><strong>y2_axis</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – y2-axis values for right axis</p></li>
 <li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Label for the points</p></li>
 <li><p><strong>plot_title</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Name of plot</p></li>
 <li><p><strong>x_axis_label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Label for x-axis</p></li>

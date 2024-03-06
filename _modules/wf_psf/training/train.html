@@ -507,13 +507,13 @@
 
         <span class="c1"># Save optimisation history in the saving dict</span>
         <span class="k">if</span> <span class="n">psf_model</span><span class="o">.</span><span class="n">save_optim_history_param</span><span class="p">:</span>
-            <span class="n">saving_optim_hist</span><span class="p">[</span>
-                <span class="s2">&quot;param_cycle</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">current_cycle</span><span class="p">)</span>
-            <span class="p">]</span> <span class="o">=</span> <span class="n">hist_param</span><span class="o">.</span><span class="n">history</span>
+            <span class="n">saving_optim_hist</span><span class="p">[</span><span class="s2">&quot;param_cycle</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">current_cycle</span><span class="p">)]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">hist_param</span><span class="o">.</span><span class="n">history</span>
+            <span class="p">)</span>
         <span class="k">if</span> <span class="n">psf_model</span><span class="o">.</span><span class="n">save_optim_history_nonparam</span><span class="p">:</span>
-            <span class="n">saving_optim_hist</span><span class="p">[</span>
-                <span class="s2">&quot;nonparam_cycle</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">current_cycle</span><span class="p">)</span>
-            <span class="p">]</span> <span class="o">=</span> <span class="n">hist_non_param</span><span class="o">.</span><span class="n">history</span>
+            <span class="n">saving_optim_hist</span><span class="p">[</span><span class="s2">&quot;nonparam_cycle</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">current_cycle</span><span class="p">)]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">hist_non_param</span><span class="o">.</span><span class="n">history</span>
+            <span class="p">)</span>
 
     <span class="c1"># Save last cycle if no cycles were saved</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">training_handler</span><span class="o">.</span><span class="n">multi_cycle_params</span><span class="o">.</span><span class="n">save_all_cycles</span><span class="p">:</span>
