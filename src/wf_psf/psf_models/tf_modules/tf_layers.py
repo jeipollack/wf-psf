@@ -7,7 +7,8 @@ the field of view.
 """
 
 import tensorflow as tf
-from wf_psf.psf_models.tf_modules import TFMonochromaticPSF
+import tensorflow_addons as tfa
+from wf_psf.psf_models.tf_modules.tf_modules import TFMonochromaticPSF
 from wf_psf.utils.utils import calc_poly_position_mat
 import wf_psf.utils.utils as utils
 from wf_psf.utils.interpolation import tfa_interpolate_spline_rbf
