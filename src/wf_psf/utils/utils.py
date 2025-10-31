@@ -5,6 +5,7 @@
 """
 
 import numpy as np
+from typing import Tuple
 import tensorflow as tf
 import PIL
 import zernike as zk
