@@ -1,4 +1,4 @@
-"""WF_PSF Run.
+"""Entry point and application runner.
 
 This module setups the run of the WF_PSF pipeline.
 
@@ -59,10 +59,9 @@ def setProgramOptions():
 
 
 def mainMethod():
-    """Main Method.
+    """Run the main entry point of the wavediff program.
 
-    The main entry point to wavediff program.
-
+    The main entry point to the wavediff program.
 
     """
     args = setProgramOptions()
@@ -93,9 +92,7 @@ def mainMethod():
 
     except Exception as e:
         logger.error(
-            "Check your config file {} for errors. Error Msg: {}.".format(
-                args.conffile, e
-            ),
+            f"Check your config file {args.conffile} for errors. Error Msg: {e}.",
             exc_info=True,
         )
 
