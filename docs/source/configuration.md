@@ -20,7 +20,13 @@ You configure these tasks by passing a configuration file to the `wavediff` comm
 
 WaveDiff expects the following configuration files under the `config/` directory:
 
-```
+You configure these tasks by passing a configuration file to the `wavediff` command (e.g., `--config configs.yaml`).
+
+## Configuration File Structure
+
+WaveDiff expects the following configuration files under the `config/` directory:
+
+```arduino
 config
 ├── configs.yaml
 ├── data_config.yaml
@@ -220,7 +226,6 @@ training_hparams:
     n_epochs_non_params: [100, 120]
 ```
 
-
 (metrics_config)=
 ## `metrics_config.yaml`  — Metrics Configuration
 
@@ -402,7 +407,10 @@ plotting_params:
 ### 4. Example Directory Structure
 Below is an example of three WaveDiff runs stored under a single parent directory:
 
-```
+**Example Directory Structure**
+Below is an example of three WaveDiff runs stored under a single parent directory:
+
+```arduino
 wf-outputs/
 ├── wf-outputs-202305271829
 │   ├── config
