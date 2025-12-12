@@ -200,8 +200,6 @@ def test_evaluate_model(
         ) as mock_evaluate_shape_results_dict,
         patch("numpy.save", new_callable=MagicMock) as mock_np_save,
     ):
-        # Mock the logger
-        _ = mocker.patch("wf_psf.metrics.metrics_interface.logger")
 
         # Call evaluate_model
         evaluate_model(
