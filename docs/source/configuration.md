@@ -20,13 +20,7 @@ You configure these tasks by passing a configuration file to the `wavediff` comm
 
 WaveDiff expects the following configuration files under the `config/` directory:
 
-You configure these tasks by passing a configuration file to the `wavediff` command (e.g., `--config configs.yaml`).
-
-## Configuration File Structure
-
-WaveDiff expects the following configuration files under the `config/` directory:
-
-```arduino
+```
 config
 ├── configs.yaml
 ├── data_config.yaml
@@ -143,13 +137,13 @@ model_params:
   reference_shifts: [-1/3, -1/3]   # Euclid-like default shifts
 
   # Obscuration / geometry
-  obscuration_rotation_angle: 0    # Degrees (multiple of 90); counterclockwise rotation. 
+  obscuration_rotation_angle: 0    # Degrees (multiple of 90); counterclockwise rotation.
 
   # CCD misalignments input file path
   ccd_misalignments_input_path: /path/to/ccd_misalignments_file.txt
-    
+
   # Boolean to use sample weights based on the noise standard deviation estimation
-  use_sample_weights: True 
+  use_sample_weights: True
 
   # Sample weight generalised sigmoid function
   sample_weights_sigmoid:
