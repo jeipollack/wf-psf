@@ -7,7 +7,6 @@ the field of view.
 """
 
 import tensorflow as tf
-import tensorflow_addons as tfa
 from wf_psf.psf_models.tf_modules.tf_modules import TFMonochromaticPSF
 from wf_psf.psf_models.tf_modules.tf_utils import find_position_indices
 from wf_psf.utils.utils import calc_poly_position_mat
